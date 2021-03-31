@@ -1,9 +1,24 @@
-p#notice = notice
+h3 = @channel.name
 
-p
-  strong Name:
-  = @channel.name
+.row.mt-4
+  .col-sm-2.p-4
+    .d-flex.justify-content-between
+      h6 Channels
+      = link_to material_icon.add, new_channel_path
 
-=> link_to 'Edit', edit_channel_path(@channel)
-'|
-=< link_to 'Back', channels_path
+    - Channel.all.each do |channel|
+      .d-flex.justify-content-between
+        = link_to channel.name, channel
+        - if current_user.channels.include?(channel)
+          = link_to material_icon.clear, channel_channel_user_path(channel), method: :delete
+    hr
+
+    .d-flex.justify-content-between
+      h6 Users
+    - @channel.users.each do |user|
+      div
+        = user.email
+  .col-sm-10.p-4
+    - if current_user.channels.include?(@channel)
+    - else
+      = link_to "Join #{@channel.name}", channel_channel_users_path(@channel), method: :post
