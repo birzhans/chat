@@ -24,6 +24,25 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+#
+
+# gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
+
+gem 'bootstrap', '~> 4.5'
+gem 'devise', '~> 4.7', '>= 4.7.0'
+gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootstrap4'
+
+# gem 'devise_masquerade', '~> 1.2'
+# gem 'font-awesome-sass', '~> 5.6', '>= 5.6.1'
+# gem 'friendly_id', '~> 5.2', '>= 5.2.5'
+# gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
+# gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+# gem 'name_of_person', '~> 1.1'
+gem 'omniauth-facebook', '~> 5.0'
+gem 'omniauth-github', '~> 1.3'
+gem 'omniauth-twitter', '~> 1.4'
+# gem 'sidekiq', '~> 6.0', '>= 6.0.3'
+# gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
