@@ -29,8 +29,12 @@ gem 'jbuilder', '~> 2.7'
 # gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
 
 gem 'bootstrap', '~> 4.5'
+
 gem 'devise', '~> 4.7', '>= 4.7.0'
 gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootstrap4'
+
+gem 'slim-rails'
+gem 'html2slim'
 
 # gem 'devise_masquerade', '~> 1.2'
 # gem 'font-awesome-sass', '~> 5.6', '>= 5.6.1'
