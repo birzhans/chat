@@ -1,0 +1,21 @@
+nav.navbar.navbar-expand-md.navbar-light.bg-light
+  .container-fluid
+    = link_to 'Chat', root_path, class: "navbar-brand"
+    button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation"]
+      span.navbar-toggler-icon
+    #navbarMain.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto.mt-2.mt-md-0
+
+      ul.navbar-nav
+        li.nav-item
+          = link_to "What's New", '#', class: "nav-link"
+        - if user_signed_in?
+          li.nav-item
+            = link_to "Settings", edit_user_registration_path, class: "nav-link"
+          li.nav-item
+            = link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link"
+        - else
+          li.nav-item
+            = link_to "Sign Up", new_user_registration_path, class: "nav-link"
+          li.nav-item
+            = link_to "Login", new_user_session_path, class: "nav-link"

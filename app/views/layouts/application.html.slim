@@ -1,16 +1,8 @@
 doctype html
 html
   head
-    title
-      | Chat
-    meta[name="viewport" content="width=device-width,initial-scale=1"]
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = render 'shared/head'
   body
-    p.notice
-      = notice
-    p.alert
-      = alert
-    = yield
+    = render 'shared/nav'
+    .container-fluid
+      = yield
