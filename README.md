@@ -1,24 +1,13 @@
-# README
+# REAL TIME GROUP CHAT WRITTEN ON RUBY/RAILS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby: 2.7.2, Rails: 6.1.3
 
-Things you may want to cover:
+* Gems: Devise, (list later...)
 
-* Ruby version
+* Dbms: Postgresql
 
-* System dependencies
+* Database creation: rails db:setup
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Migration: rails db:migrate
 
 * ...
