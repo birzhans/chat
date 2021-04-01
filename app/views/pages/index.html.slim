@@ -1,1 +1,5 @@
-h1 Hi there
+div data-controller="hello" data-hello-open="Open" data-hello-close="Close"
+  button.btn.btn-danger data-hello-target="button" data-action="click->hello#toggle"
+    | Click me!
+  h1.d-none data-hello-target="output"
+

@@ -1,18 +1,22 @@
-// Visit The Stimulus Handbook for more details 
-// https://stimulusjs.org/handbook/introduction
-// 
-// This example controller works with specially annotated HTML like:
-//
-// <div data-controller="hello">
-//   <h1 data-target="hello.output"></h1>
-// </div>
-
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "output" ]
+  static targets = [ "output", "button" ]
+
+  toggle(event) {
+    var output = this.outputTarget;
+    var button = this.buttonTarget;
+
+    event.preventDefault();
+    output.classList.toggle('d-none')
+    if (output.classList.contains('d-none')) {
+      button.textContent = this.data.get('open')
+    } else {
+      button.textContent = this.data.get('close')
+    }
+  }
 
   connect() {
-    this.outputTarget.textContent = 'Hello, Stimulus!'
+    this.outputTarget.textContent = 'Hello, Stimulus, its cool!'
   }
 }

@@ -1,6 +1,8 @@
-= form_with model: [channel, Message.new] do |form|
+= form_with model: [channel, Message.new],
+            data: { action: 'ajax:success->channel#clearMessage'},
+            local: false do |form|
   .row
     .col-10
-      = form.text_field :body, class: 'form-control'
+      = form.text_field :body, class: 'form-control', data: { target: 'channel.newMessage' }
     .col-2
       = form.submit '>', class: 'btn btn-info'
