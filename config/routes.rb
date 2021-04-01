@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :channels do
     resources :channel_users
+    resources :messages
   end
 
   devise_for :users

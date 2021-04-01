@@ -1,0 +1,6 @@
+= form_with model: [channel, Message.new] do |form|
+  .row
+    .col-10
+      = form.text_field :body, class: 'form-control'
+    .col-2
+      = form.submit '>', class: 'btn btn-info'
